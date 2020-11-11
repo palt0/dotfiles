@@ -1,0 +1,17 @@
+## Make filename matching and completion case-insensitive
+set completion-ignore-case on
+
+## Customize max nr. of possible completions shown without requiring confirmation
+# set completion-query-items 150
+
+## Use Vim editing mode
+# set editing-mode vim
+
+## Display an asterisk at the start of history lines which have been modified
+set mark-modified-lines on
+
+## Symlinked directories have a slash appended, consistently with mark-directories
+set mark-symlinked-directories on
+
+## Consider cursor position for completion
+set skip-completed-text on
