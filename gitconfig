@@ -17,6 +17,10 @@
     undo = reset HEAD~1 --soft
 
 
+[commit]
+    gpgsign = true
+
+
 [core]
     excludesfile = ~/.gitignore
 
@@ -24,3 +28,4 @@
 [user]
     email = platoo@outlook.it
     name = Plato
+    signingkey = AE1AE9341E1B76DA
