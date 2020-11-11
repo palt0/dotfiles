@@ -1,0 +1,22 @@
+[alias]
+    amend = commit --amend  # --reuse-message=HEAD
+
+    # Compact version of git log
+    l = log --pretty=oneline --graph --abbrev-commit -n 20
+
+    # Checkout pull request from a github remote
+    # i.e.: pr upstream 1
+    pr = !"pr() { git fetch $1 pull/$2/head:pr-$2; git checkout pr-$2; }; pr"
+
+    # Interactive rebase starting from HEAD~n
+    reb = !"reb() { git rebase -i HEAD~$1; }; reb"
+
+    # Update author info: mainly used to change commit date to current time
+    refresh = commit --amend --reset-author --no-edit
+
+    undo = reset HEAD~1 --soft
+
+
+[user]
+    email = platoo@outlook.it
+    name = Plato
