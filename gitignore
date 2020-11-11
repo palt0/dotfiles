@@ -1,0 +1,5 @@
+# Linux trash folder
+.Trash-*
+
+# KDE directory preferences
+.directory

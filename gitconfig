@@ -17,6 +17,10 @@
     undo = reset HEAD~1 --soft
 
 
+[core]
+    excludesfile = ~/.gitignore
+
+
 [user]
     email = platoo@outlook.it
     name = Plato
