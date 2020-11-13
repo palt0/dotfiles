@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Allow expanding aliases after sudo
+alias sudo="sudo "
+
 ##
 ## Default Manjaro aliases
 ##
@@ -9,3 +12,22 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
+
+##
+## Navigation
+##
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias dl="cd ~/Downloads"
+alias docs="cd ~/Documents"
+[ -r ~/repos ] && alias repos="cd ~/repos"
+
+##
+## Misc
+##
+
+alias reload="exec bash"
