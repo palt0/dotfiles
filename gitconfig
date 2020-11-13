@@ -25,7 +25,5 @@
     excludesfile = ~/.gitignore
 
 
-[user]
-    email = platoo@outlook.it
-    name = Plato
-    signingkey = AE1AE9341E1B76DA
+[include]
+    path = ~/.gitconfig_private
