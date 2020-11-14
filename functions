@@ -26,3 +26,15 @@ ex()
         echo "'$1' is not a valid file"
     fi
 }
+
+##
+## mcd - mkdir and cd
+## usage: mcd <path/to/new/dir>
+##
+## If multiple paths are supplied, it creates as many directories and navigates into the
+## first one.
+##
+
+mcd() {
+    mkdir -p "$@" && cd "$1"
+}
