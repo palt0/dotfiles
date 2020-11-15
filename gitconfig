@@ -31,3 +31,13 @@
 
 [init]
     defaultBranch = main
+
+
+[user]
+    # `email` should be set in ./gitconfig.local
+    # `name` should be set in ./gitconfig.local
+    # `signingkey` should be set in ./gitconfig.local
+
+    # Don't try to guess defaults for `user.name` and `user.email` to avoid leaking
+    # sensitive data accidentally.
+    useConfigOnly = true
