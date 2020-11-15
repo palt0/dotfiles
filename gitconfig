@@ -26,7 +26,7 @@
 
 
 [include]
-    path = ~/.gitconfig_private
+    path = ~/.gitconfig.local
 
 
 [init]
