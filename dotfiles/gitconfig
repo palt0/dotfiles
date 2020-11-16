@@ -1,6 +1,11 @@
 [alias]
     amend = commit --amend  # --reuse-message=HEAD
 
+    diffc = diff --cached
+
+    # Prefer `push --force-with-lease` to `push --force` because it's safer
+    forcepush = push --force-with-lease
+
     # Compact version of git log
     l = log --pretty=oneline --graph --abbrev-commit -n 20
 
@@ -13,6 +18,8 @@
 
     # Update author info: mainly used to change commit date to current time
     refresh = commit --amend --reset-author --no-edit
+
+    s = status  # -s
 
     undo = reset HEAD~1 --soft
 
