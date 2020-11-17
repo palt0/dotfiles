@@ -40,6 +40,10 @@
     defaultBranch = main
 
 
+[pull]
+    ff = only
+
+
 [user]
     # `email` should be set in ./gitconfig.local
     # `name` should be set in ./gitconfig.local
