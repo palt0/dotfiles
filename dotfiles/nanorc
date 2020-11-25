@@ -1,0 +1,28 @@
+## Automatically indent newly created lines
+set autoindent
+
+## Draw a vertical stripe at the n-th column
+set guidestripe 88
+
+## Save the last 100 search strings, replacement strings, commands
+set historylog
+
+## Display a scrollbar in the right margin
+set indicator
+
+## Diplay line numbers in the left margin
+set linenumbers
+
+## Use libmagic to determine the syntax
+# set magic
+
+## Soft-wrapping
+set softwrap
+# set atblanc
+
+## Make sessions suspendable (with ^Z)
+set suspendable
+
+## Convert tabs to 4 spaces
+set tabsize 4
+set tabstospaces
