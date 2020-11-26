@@ -1,3 +1,7 @@
+##
+## Main settings
+##
+
 [alias]
     amend = commit --amend  # --reuse-message=HEAD
 
@@ -30,6 +34,7 @@
 
 [core]
     excludesfile = ~/.gitignore
+    pager = diff-so-fancy | less --tabs=4 -RFX
 
 
 [include]
@@ -52,3 +57,11 @@
     # Don't try to guess defaults for `user.name` and `user.email` to avoid leaking
     # sensitive data accidentally.
     useConfigOnly = true
+
+##
+## Plugins
+##
+
+[diff-so-fancy]
+    markEmptyLines = false
+    stripLeadingSymbols = false
