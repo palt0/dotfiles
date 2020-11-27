@@ -1,5 +1,45 @@
-# Linux trash folder
-.Trash-*
+##
+## Linux
+##
+
+# Temporary files which can be created if a process still has a handle open of a deleted file
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
 
 # KDE directory preferences
 .directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+##
+## GPG
+##
+
+# Don't accidentally publish private keys
+secring.*
+
+##
+## Kate
+##
+
+# Swap files
+.*.kate-swp
+.swp.*
+
+##
+## Sublime Text
+##
+
+# Cache files for Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# Workspace files are user-specific
+*.sublime-workspace
