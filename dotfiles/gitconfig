@@ -27,6 +27,11 @@
 
     undo = reset HEAD~1 --soft
 
+    # Aliases for handling files marked as `assume unchanged`
+    hide = update-index --assume-unchanged
+    unhide = update-index --no-assume-unchanged
+    lsh = !git ls-files -v | grep "^[a-z]" # List files marked as `assume unchanged`
+
 
 [commit]
     gpgsign = true
