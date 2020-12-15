@@ -9,6 +9,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Load NVM bash completion
 
 ##
+## Poetry
+##
+
+export PATH="$HOME/.poetry/bin:$PATH"
+# To enable completions, see `poetry help completions`.
+
+##
 ## Pyenv
 ##
 
