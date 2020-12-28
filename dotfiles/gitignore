@@ -18,11 +18,14 @@
 .nfs*
 
 ##
-## GPG
+## Secrets
 ##
 
-# Don't accidentally publish private keys
+# GPG (private keys)
 secring.*
+
+# PyPI credentials
+.pypirc
 
 ##
 ## Kate
