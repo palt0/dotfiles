@@ -1,0 +1,5 @@
+# Github Linguist overrides
+gitconfig linguist-language=gitconfig
+gitignore linguist-language=gitignore
+gpg-agent.conf linguist-language=ini
+gpg.conf linguist-language=ini
