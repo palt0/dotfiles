@@ -30,4 +30,4 @@ alias docs="cd ~/Documents"
 ## Misc
 ##
 
-alias reload="exec bash"
+alias reload='exec $SHELL -l'
