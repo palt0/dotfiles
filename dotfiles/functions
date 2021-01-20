@@ -28,6 +28,23 @@ ex()
 }
 
 ##
+## fm
+## usage: fm <optional-dir>
+##
+## Opens file manager in a subshell. Defaults to the current working directory.
+##
+
+fm() {
+    if [ -z "$1" ] ; then
+        (xdg-open .) > /dev/null 2>&1
+    elif [ -d "$1" ] ; then
+        (xdg-open "$1") > /dev/null 2>&1
+    else
+        echo "'$1' is not a valid directory"
+    fi
+}
+
+##
 ## mcd - mkdir and cd
 ## usage: mcd <path/to/new/dir>
 ##
