@@ -1,6 +1,20 @@
 {
+    // IDE
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.emptySelectionClipboard": false,
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "search.smartCase": true,
+    "search.useGlobalIgnoreFiles": true,
     "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    // Languages
+    "python.formatting.provider": "black",
+    "python.linting.pylintUseMinimalCheckers": false // https://github.com/microsoft/vscode-python/issues/11995
 }
