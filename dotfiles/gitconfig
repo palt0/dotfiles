@@ -25,7 +25,8 @@
 
     s = status  # -s
 
-    undo = reset HEAD~1 --soft
+    # Reset to HEAD~n. Defaults to HEAD~
+    undo = !"undo() { git reset HEAD~${1:-1} -N; }; undo"
 
     # Aliases for handling files marked as `assume unchanged`
     hide = update-index --assume-unchanged
