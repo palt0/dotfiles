@@ -4,16 +4,6 @@
 alias sudo="sudo "
 
 ##
-## Default Manjaro aliases
-##
-
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
-alias more=less
-
-##
 ## Navigation
 ##
 
@@ -30,4 +20,12 @@ alias docs="cd ~/Documents"
 ## Misc
 ##
 
+# Confirm before overwriting
+alias cp='cp -i'
+
+# Improve readability of commands
+alias df='df -h'  # Human-readable sizes
+alias free='free -m'  # Show sizes in MB
+
+alias np='nano -w PKGBUILD'
 alias reload='exec $SHELL -l'
