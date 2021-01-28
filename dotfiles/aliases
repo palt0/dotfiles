@@ -22,6 +22,7 @@ alias docs="cd ~/Documents"
 
 # Confirm before overwriting
 alias cp='cp -i'
+alias mv='mv -i'
 
 # Improve readability of commands
 alias df='df -h'  # Human-readable sizes
