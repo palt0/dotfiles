@@ -64,6 +64,11 @@
     # sensitive data accidentally.
     useConfigOnly = true
 
+
+[url "https://github.com/"]
+    insteadOf = "github:"
+    insteadOf = "gh:"
+
 ##
 ## Plugins
 ##
