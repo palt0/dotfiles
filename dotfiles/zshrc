@@ -72,7 +72,7 @@ source ~/.zbindkeys  # Keybindings
 source ~/.zprompt  # Prompt
 
 # Optional bash complementary files
-for file in ~/.{aliases,functions,misc}; do
+for file in ~/.{aliases,extras,functions,misc}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done
 unset file
