@@ -1,6 +1,5 @@
 # Github Linguist overrides
 **/Code/User/*.json linguist-language=jsonc
+*.conf linguist-language=ini
 gitconfig linguist-language=gitconfig
 gitignore linguist-language=gitignore
-gpg-agent.conf linguist-language=ini
-gpg.conf linguist-language=ini
