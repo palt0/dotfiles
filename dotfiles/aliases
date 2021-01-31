@@ -26,6 +26,7 @@ alias mv='mv -i'
 
 # Improve readability of commands
 alias df='df -h'  # Human-readable sizes
+alias du='du -h'  # Human-readable sizes
 alias free='free -m'  # Show sizes in MB
 
 alias np='nano -w PKGBUILD'
