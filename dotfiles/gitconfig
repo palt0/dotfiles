@@ -5,7 +5,12 @@
 [alias]
     amend = commit --amend  # --reuse-message=HEAD
 
+    c = commit
+
     diffc = diff --cached
+
+    # Check diff against HEAD~n. Defaults to HEAD~
+    diffh = !"diffh() { git diff HEAD~${1:-1}; }; diffh"
 
     # Prefer `push --force-with-lease` to `push --force` because it's safer
     forcepush = push --force-with-lease
@@ -19,6 +24,8 @@
 
     # Interactive rebase starting from HEAD~n
     reb = !"reb() { git rebase -i HEAD~$1; }; reb"
+
+    rebc = rebase --continue
 
     # Update author info: mainly used to change commit date to current time
     refresh = commit --amend --reset-author --no-edit
