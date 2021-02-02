@@ -28,6 +28,7 @@ alias mv='mv -i'
 alias df='df -h'  # Human-readable sizes
 alias du='du -h'  # Human-readable sizes
 alias free='free -m'  # Show sizes in MB
+alias ls='ls -hp --color=auto --group-directories-first --hyperlink=auto'
 
 alias np='nano -w PKGBUILD'
 alias reload='exec $SHELL -l'
