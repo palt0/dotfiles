@@ -1,0 +1,7 @@
+##
+## WSL compatibility settings
+##
+
+if grep -q Microsoft /proc/version; then
+    unsetopt BG_NICE  # https://github.com/Microsoft/BashOnWindows/issues/1887
+fi
