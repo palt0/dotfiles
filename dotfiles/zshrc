@@ -47,14 +47,16 @@ autoload -Uz colors
 colors
 
 ##
-## Plugins
+## Plugins (loaded with zplug)
 ##
 
+source ~/.zplug/init.zsh
+
 # Use syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+zplug "zsh-users/zsh-syntax-highlighting"
 
 # History substring search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+zplug "zsh-users/zsh-history-substring-search"
 # Bind UP and DOWN arrow keys to history substring search.
 # (Base keybindings are configured in ~/.zbindkeys)
 zmodload zsh/terminfo
@@ -64,12 +66,16 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Enable Fish-like autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+zplug "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # Autojump
-source /usr/share/zsh/plugins/zsh-autojump/zsh-autojump.zsh
+zplug "wting/autojump"
+
+if zplug check || zplug install; then
+    zplug load
+fi
 
 ##
 ## Complementary files
