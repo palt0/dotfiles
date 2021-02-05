@@ -28,7 +28,7 @@
     rebc = rebase --continue
 
     # Update author info: mainly used to change commit date to current time
-    refresh = commit --amend --reset-author --no-edit
+    refresh = commit --amend --no-edit --no-verify --reset-author
 
     s = status  # -s
 
