@@ -17,6 +17,11 @@
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
+# Swap files
+*.swp
+.swp.*
+.*.kate-swp  # Kate
+
 # nohup output
 nohup.out
 
@@ -29,14 +34,6 @@ secring.*
 
 # PyPI credentials
 .pypirc
-
-##
-## Kate
-##
-
-# Swap files
-.*.kate-swp
-.swp.*
 
 ##
 ## Sublime Text
