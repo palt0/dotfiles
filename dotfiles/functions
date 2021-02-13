@@ -55,3 +55,18 @@ fm() {
 mcd() {
     mkdir -p "$@" && cd "$1" || return
 }
+
+##
+## tmpd - create temporary directory and cd
+## usage: tmpd <optional_label>
+##
+
+tmpd() {
+    local temp_dir
+    if [ $# -eq 0 ]; then
+        temp_dir=$(mktemp -d)
+    else
+        temp_dir=$(mktemp -d -t "${1}.XXXXXXXXXX")
+    fi
+    cd "$temp_dir" || return
+}
