@@ -71,7 +71,7 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # Autojump
-if [ -x "$(command -v autojump)" ]; then
+if [[ -x $(command -v autojump) ]]; then
     source /usr/share/autojump/autojump.sh
     zplug "wting/autojump"
 fi
@@ -90,6 +90,6 @@ source ~/.zprompt  # Prompt
 
 # Optional bash complementary files
 for file in ~/.{aliases,extras,functions,misc}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+    [[ -r $file ]] && [[ -f $file ]] && source "$file";
 done
 unset file

@@ -15,8 +15,8 @@ fi
 ##
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Load NVM
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Load NVM bash completion
+[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"  # Load NVM
+[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"  # Load NVM bash completion
 
 ##
 ## Python
@@ -25,10 +25,10 @@ export NVM_DIR="$HOME/.nvm"
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-[ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)"
+[[ -x $(command -v pyenv) ]] && eval "$(pyenv init -)"
 
 # Enable pip autocompletion
-[ -x "$(command -v pip)" ] && eval "$(pip completion --zsh)"
+[[ -x $(command -v pip) ]] && eval "$(pip completion --zsh)"
 
 # Poetry
 export PATH="$HOME/.poetry/bin:$PATH"
@@ -38,7 +38,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 ## Ruby
 ##
 
-if [ -x "$(command -v ruby)" ]; then
+if [[ -x $(command -v ruby) ]]; then
     GEM_USER_DIR=$(ruby -r rubygems -e 'puts Gem.user_dir')
     export PATH="$GEM_USER_DIR/bin:$PATH"
 fi
