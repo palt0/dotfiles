@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 
 ##
+## Customize `less`: source highlighting, lesspipe
+##
+
+export LESSPIPE_PATH="/usr/share/source-highlight/src-hilite-lesspipe.sh"
+if [[ -f $LESSPIPE_PATH ]]; then
+    export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+    export LESS=' -R '
+fi
+
+##
 ## NVM
 ##
 
