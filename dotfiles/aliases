@@ -14,7 +14,7 @@ alias .....="cd ../../../.."
 
 alias dl="cd ~/Downloads"
 alias docs="cd ~/Documents"
-[ -r ~/repos ] && alias repos="cd ~/repos"
+[[ -r ~/repos ]] && alias repos="cd ~/repos"
 
 ##
 ## Misc

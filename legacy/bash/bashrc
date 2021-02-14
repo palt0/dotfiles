@@ -5,10 +5,10 @@
 ## Complementary files
 ##
 
-[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+[[ -r /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 
 for file in ~/.{aliases,functions,misc}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+    [[ -r $file ]] && [[ -f $file ]] && source "$file";
 done
 unset file
 
