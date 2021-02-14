@@ -57,6 +57,17 @@ mcd() {
 }
 
 ##
+## targz - create tar.gz archive of a file/directory
+## usage: targz <path> [-r]
+## options: -r, delete original file/directory
+##
+
+targz() {
+    tar -zcf "$1".tar.gz "$1"
+    [[ $2 == "-r" ]] && rm -r "$1"
+}
+
+##
 ## tmpd - create temporary directory and cd
 ## usage: tmpd <optional_label>
 ##
