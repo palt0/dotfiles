@@ -1,0 +1,4 @@
+# -*- npmrc -*-
+
+# Hide fund messages at the end of `npm install` output
+fund = false
