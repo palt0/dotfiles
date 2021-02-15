@@ -45,6 +45,7 @@ compinit -d
 # Colors
 autoload -Uz colors
 colors
+eval $(dircolors -b ~/.dir_colors)
 
 ##
 ## Plugins (loaded with zplug)
