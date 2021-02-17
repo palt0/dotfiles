@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+#
+# The functions in this file are utilities used within dotfiles bash scripts.
+# This file is sourced before any other complementary files and should't have any
+# dependencies.
+
+##
+## Load function lazily (to speedup shell startup)
+## Inspired by https://github.com/lukechilds/zsh-nvm
+##
+## Parameters:
+##  - $1: callback function to call lazily
+##  - ${@:2}: list of binaries that depend on the callback
+##
+
+_lazy_load() {
+    local function_to_load=$1
+    local binaries=("${@:2}")
+
+    # Remove any binaries that conflict with current aliases
+    local cmds=()
+    for bin in "${binaries[@]}"; do
+        [[ "$(which "$bin" 2> /dev/null)" = "$bin: aliased to "* ]] || cmds+=($bin)
+    done
+
+    # Create a function for each command
+    for cmd in "${cmds[@]}"; do
+        # When called, unset all lazy loaders, then run loading function
+        eval "$cmd(){
+            echo 'Lazy loading...'
+            unset -f ${cmds[*]} > /dev/null 2>&1
+            $function_to_load
+            $cmd \"\$@\"
+        }"
+    done
+}

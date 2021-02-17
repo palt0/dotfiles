@@ -85,6 +85,9 @@ fi
 ## Complementary files
 ##
 
+## Shared resources needed for other complementary files
+source ~/.shared
+
 # Required zsh complementary files
 source ~/.zbindkeys  # Keybindings
 source ~/.zprompt  # Prompt
