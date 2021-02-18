@@ -1,4 +1,4 @@
 # .gitconfig file for the dotfiles repository
 
 *.local
-dotfiles/extras
+dotfiles/shell.d/extras
