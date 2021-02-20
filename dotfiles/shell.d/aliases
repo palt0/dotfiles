@@ -1,37 +1,40 @@
 #!/usr/bin/env bash
 
 # Allow expanding aliases after sudo
-alias sudo="sudo "
+alias sudo='sudo '
 
-##
-## Navigation
-##
-
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
-alias dl="cd ~/Downloads"
-alias docs="cd ~/Documents"
-[[ -r ~/repos ]] && alias repos="cd ~/repos"
-
-##
-## Misc
-##
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias dl='cd ~/Downloads'
+alias docs='cd ~/Documents'
+[[ -r ~/repos ]] && alias repos='cd ~/repos'
 
 # Confirm before overwriting
 alias cp='cp -i'
 alias mv='mv -i'
 
 # Improve readability of commands
-alias df='df -h'  # Human-readable sizes
+alias df='df -hT --total'  # Human-readable sizes, show file-system type, print a total
 alias du='du -h'  # Human-readable sizes
-alias free='free -m'  # Show sizes in MB
+alias free='free -mt'  # Show sizes in MB, print a total
+alias ls='ls -hp --color=auto --group-directories-first --hyperlink=auto'
+
+# grep
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias ls='ls -hp --color=auto --group-directories-first --hyperlink=auto'
+alias hgrep='history | grep'
 
-alias np='nano -w PKGBUILD'
+# Misc new commands
+alias base='cd $(git rev-parse --show-toplevel)'
+alias du1='du --max-depth=1'
+alias fixln='find . -maxdepth 1 -xtype l -delete'  # Delete broken symlinks
+alias fn="find . -name"
+alias ll='ls -lhA'  # Show as a list, with dotfiles, without "." and ".."
 alias reload='exec $SHELL -l'
+
+# Shorthands
+alias c=clear
