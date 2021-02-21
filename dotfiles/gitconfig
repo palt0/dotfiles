@@ -59,6 +59,7 @@
 
 [init]
     defaultBranch = main
+    templatedir = ~/.git-templates
 
 
 [pull]
