@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
 ##
+## backup - create backup copy of a file/directory
+## usage: backup <file_or_directory>
+##
+
+backup() {
+    cp -r "$1" "$1.old"
+}
+
+##
 ## ex - archive extractor
 ## usage: ex <file>
 ##
