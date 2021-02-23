@@ -1,0 +1,52 @@
+if &compatible
+    set nocompatible
+endif
+
+" Enable syntax highlighting when the terminal has colors or when using the GUI
+if &t_Co > 2 || has("gui_running")
+    syntax on
+endif
+
+" Mouse support
+if has('mouse')
+    set mouse=a
+endif
+
+" --- Generic settings ---
+filetype plugin indent on
+set backspace=indent,eol,start  " Allow backspacing over everything in insert mode
+set display+=lastline           " Show @@@ in the last line if it is truncated.
+set history=200                 " Keep 200 lines of command line history
+set listchars=trail:·,tab:»·    " Show tabs and trailing spaces
+set number                      " Show line numbers
+set ruler                       " Show the cursor position all the time
+set shortmess+=I                " Hide intro message
+set showmode                    " Show editor mode (e.g. -- INSERT --)
+set splitbelow
+set splitright
+" set title
+
+" --- Indentation settings ---
+set autoindent
+set copyindent                  " Copy indent style from previous lines
+set expandtab                   " Indent with spaces
+set shiftwidth=4                " Nr. of spaces for auto-indentation
+set tabstop=4                   " A tab is four spaces
+" set smarttab
+
+" --- Search settings ---
+set hlsearch                    " Enable search highlighting
+set incsearch                   " Show partial matches while typing
+set ignorecase                  " Case-insensitive searches
+set smartcase                   " Searches become case-sensitive with upper charss
+
+" --- Keybindings ---
+" Skip paragraphs with Ctrl-Up/Down
+:nmap <C-UP> {
+:nmap <C-DOWN> }
+
+" Jump words with Alt
+:map! <A-LEFT> <S-LEFT>
+:map <A-LEFT> <S-LEFT>
+:map! <A-RIGHT> <S-RIGHT>
+:map <A-RIGHT> <S-RIGHT>
