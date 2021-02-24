@@ -23,6 +23,13 @@
 nohup.out
 
 ##
+## Artifacts
+##
+
+# zcompile
+*.zwc
+
+##
 ## Secrets
 ##
 
