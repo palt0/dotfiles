@@ -20,6 +20,9 @@ if [[ -x $(command -v ruby) ]]; then
     export PATH="$GEM_USER_DIR/bin:$PATH"
 fi
 
+# Rust
+[[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+
 ##
 ## Defaults
 ##
