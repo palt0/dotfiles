@@ -52,7 +52,9 @@ eval $(dircolors -b ~/.dir_colors)
 ##
 
 zsh-load-plugin() {
-    source "$HOME/.shell.d/plugins/$1/$1.plugin.zsh"
+    local filepath="$HOME/.shell.d/plugins/$1/$1.plugin.zsh"
+    [[ ! "$filepath.zwc" -nt $filepath ]] && zcompile $filepath
+    source $filepath
 }
 
 # Use syntax highlighting
