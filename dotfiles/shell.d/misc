@@ -1,16 +1,6 @@
 #!/usr/bin/env bash
 
 ##
-## Customize `less`: source highlighting, lesspipe
-##
-
-export LESSPIPE_PATH="/usr/share/source-highlight/src-hilite-lesspipe.sh"
-if [[ -f $LESSPIPE_PATH ]]; then
-    export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-    export LESS=' -R '
-fi
-
-##
 ## NVM (lazy load)
 ##
 
@@ -32,33 +22,11 @@ node_binaries+=('nvm')
 _lazy_load _load_nvm "${node_binaries[@]}"
 
 ##
-## Python
+## Others
 ##
-
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-[[ -x $(command -v pyenv) ]] && eval "$(pyenv init -)"
 
 # Enable pip autocompletion
 eval "$(pip completion --zsh)"
-
-# Poetry
-export PATH="$HOME/.poetry/bin:$PATH"
-# To enable completions, see `poetry help completions`.
-
-##
-## Ruby
-##
-
-if [[ -x $(command -v ruby) ]]; then
-    GEM_USER_DIR=$(ruby -r rubygems -e 'puts Gem.user_dir')
-    export PATH="$GEM_USER_DIR/bin:$PATH"
-fi
-
-##
-## Others
-##
 
 # Autojump
 # shellcheck disable=SC1091
