@@ -42,6 +42,11 @@
     unhide = update-index --no-assume-unchanged
     lsh = !git ls-files -v | grep "^[a-z]" # List files marked as `assume unchanged`
 
+    # Submodules
+    sdiff = !git diff && git submodule foreach 'git diff'
+    spush = push --recurse-submodules=on-demand
+    supdate = submodule update --remote --merge
+
 
 [commit]
     gpgsign = true
@@ -51,6 +56,10 @@
     autocrlf = input
     excludesfile = ~/.gitignore
     pager = diff-so-fancy | less --tabs=4 -RFX
+
+
+[diff]
+	# submodule = log
 
 
 [include]
@@ -64,6 +73,10 @@
 
 [pull]
     ff = only
+
+
+[status]
+    submoduleSummary = true
 
 
 [user]
