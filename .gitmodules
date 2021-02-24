@@ -7,3 +7,6 @@
 [submodule "dotfiles/shell.d/plugins/zsh-autosuggestions"]
 	path = dotfiles/shell.d/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "dotfiles/vim/pack/vendor/start/nerdtree"]
+	path = dotfiles/vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
