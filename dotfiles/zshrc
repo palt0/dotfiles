@@ -48,16 +48,18 @@ colors
 eval $(dircolors -b ~/.dir_colors)
 
 ##
-## Plugins (loaded with zplug)
+## Plugins
 ##
 
-source ~/.zplug/init.zsh
+zsh-load-plugin() {
+    source "$HOME/.shell.d/plugins/$1/$1.plugin.zsh"
+}
 
 # Use syntax highlighting
-zplug "zsh-users/zsh-syntax-highlighting"
+zsh-load-plugin "zsh-syntax-highlighting"
 
 # History substring search
-zplug "zsh-users/zsh-history-substring-search"
+zsh-load-plugin "zsh-history-substring-search"
 # Bind UP and DOWN arrow keys to history substring search.
 # (Base keybindings are configured in ~/.zbindkeys)
 zmodload zsh/terminfo
@@ -67,13 +69,9 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Enable Fish-like autosuggestions
-zplug "zsh-users/zsh-autosuggestions"
+zsh-load-plugin "zsh-autosuggestions"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-
-if zplug check || zplug install; then
-    zplug load
-fi
 
 ##
 ## Complementary files
