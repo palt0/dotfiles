@@ -7,3 +7,15 @@
 [submodule "dotfiles/shell.d/plugins/zsh-autosuggestions"]
 	path = dotfiles/shell.d/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "dotfiles/vim/pack/vendor/start/auto-pairs"]
+	path = dotfiles/vim/pack/vendor/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "dotfiles/vim/pack/vendor/start/rust"]
+	path = dotfiles/vim/pack/vendor/start/rust
+	url = https://github.com/rust-lang/rust.vim
+[submodule "dotfiles/vim/pack/vendor/start/editorconfig"]
+	path = dotfiles/vim/pack/vendor/start/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "dotfiles/vim/pack/vendor/start/nerdtree"]
+	path = dotfiles/vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
