@@ -90,3 +90,10 @@ tmpd() {
     fi
     cd "$temp_dir" || return
 }
+
+##
+## Translation tools
+##
+
+lower() { awk '{ print tolower($0) }' <<< "$*"; }
+upper() { awk '{ print toupper($0) }' <<< "$*"; }
