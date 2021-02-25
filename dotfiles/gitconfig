@@ -55,7 +55,7 @@
 [core]
     autocrlf = input
     excludesfile = ~/.gitignore
-    pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = delta
 
 
 [diff]
@@ -69,6 +69,10 @@
 [init]
     defaultBranch = main
     templatedir = ~/.git-templates
+
+
+[interactive]
+    diffFilter = delta --color-only
 
 
 [pull]
@@ -97,6 +101,12 @@
 ## Plugins
 ##
 
-[diff-so-fancy]
-    markEmptyLines = false
-    stripLeadingSymbols = false
+[delta]
+    file-decoration-style = blue bold ol ul
+    hunk-header-style = file line-number
+    hunk-header-decoration-style = bold
+    hunk-header-file-style = purple
+    hunk-header-line-number-style = purple
+    # hyperlinks = true
+    keep-plus-minus-markers = true
+    # navigate = true
