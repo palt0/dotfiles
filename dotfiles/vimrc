@@ -17,7 +17,6 @@ filetype plugin indent on
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode
 set display+=lastline           " Show @@@ in the last line if it is truncated.
 set history=200                 " Keep 200 lines of command line history
-set listchars=trail:·,tab:»·    " Show tabs and trailing spaces
 set number                      " Show line numbers
 set ruler                       " Show the cursor position all the time
 set shortmess+=I                " Hide intro message
@@ -40,6 +39,12 @@ set hlsearch                    " Enable search highlighting
 set incsearch                   " Show partial matches while typing
 set ignorecase                  " Case-insensitive searches
 set smartcase                   " Searches become case-sensitive with upper charss
+
+" --- Listchars modes ---
+set list
+command Rchars set listchars=trail:·,tab:»\ 
+command Hchars set listchars=trail:·,tab:»·,space:·,eol:$,nbsp:%
+Rchars
 
 " --- Keybindings ---
 " Skip paragraphs with Ctrl-Up/Down
