@@ -33,6 +33,11 @@ autoload -Uz colors
 colors
 eval $(dircolors -b ~/.dir_colors)
 
+# Safe paste
+set zle_bracketed_paste
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+
 ##
 ## Plugins
 ##
