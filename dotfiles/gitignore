@@ -58,3 +58,23 @@ secring.*
 
 # Workspace files are user-specific
 *.sublime-workspace
+
+##
+## Vim
+##
+
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Misc
+.netrwhist
+tags  # Auto-generated tag files
+[._]*.un~  # Persistent undo
