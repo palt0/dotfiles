@@ -46,6 +46,9 @@ command Rchars set listchars=trail:·,tab:»\
 command Hchars set listchars=trail:·,tab:»·,space:·,eol:$,nbsp:%
 Rchars
 
+" --- Plugin settings ---
+let g:rainbow_active=1
+
 " --- Keybindings ---
 " Skip paragraphs with Ctrl-Up/Down
 nmap <C-UP> {

@@ -19,3 +19,6 @@
 [submodule "dotfiles/vim/pack/vendor/start/nerdtree"]
 	path = dotfiles/vim/pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule "dotfiles/vim/pack/vendor/start/rainbow"]
+	path = dotfiles/vim/pack/vendor/start/rainbow
+	url = https://github.com/luochen1990/rainbow.git
