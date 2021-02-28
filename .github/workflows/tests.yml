@@ -10,4 +10,4 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Shellcheck
-        run: bash ./tests/shellcheck.sh
+        run: bash ./scripts/shellcheck.sh
