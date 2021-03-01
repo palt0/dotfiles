@@ -55,6 +55,9 @@ fi
 ## WSL compatibility settings
 ##
 
-if grep -q Microsoft /proc/version; then
+if grep -qi microsoft /proc/version; then
+    export WSL=true
     unsetopt BG_NICE  # https://github.com/Microsoft/BashOnWindows/issues/1887
+else
+    export WSL=false
 fi
