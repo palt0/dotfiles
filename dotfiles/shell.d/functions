@@ -37,23 +37,6 @@ ex()
 }
 
 ##
-## fm
-## usage: fm <optional-dir>
-##
-## Opens file manager in a subshell. Defaults to the current working directory.
-##
-
-fm() {
-    if [[ -z $1 ]] ; then
-        (xdg-open .) > /dev/null 2>&1
-    elif [[ -d $1 ]] ; then
-        (xdg-open "$1") > /dev/null 2>&1
-    else
-        echo "'$1' is not a valid directory"
-    fi
-}
-
-##
 ## mcd - mkdir and cd
 ## usage: mcd <path/to/new/dir>
 ##
@@ -63,6 +46,34 @@ fm() {
 
 mcd() {
     mkdir -p "$@" && cd "$1" || return
+}
+
+##
+## open - wrapper of xdg-open
+##
+## Defaults to opening the current directory.
+## In a WSL, it opens directories with explorer.exe.
+##
+
+function open() {
+    readonly args=${*:-$PWD}
+
+    # Supports only regular Linux distros and WSL because that's what I use :)
+    if [[ ! $OSTYPE =~ linux* ]]; then
+        echo "$OSTYPE is not supported"
+        return 1
+    fi
+
+    if [[ -d $args ]]; then
+        if [[ $WSL == true ]]; then
+            explorer.exe "$(wslpath -w "$args")" &>/dev/null
+        else
+            # Silence file manager output
+            (xdg-open "$args") > /dev/null 2>&1
+        fi
+    else
+        xdg-open "$args"
+    fi
 }
 
 ##
