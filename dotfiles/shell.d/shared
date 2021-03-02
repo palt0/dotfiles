@@ -28,10 +28,11 @@ _lazy_load() {
     local function_to_load=$1
     local binaries=("${@:2}")
 
-    # Remove any binaries that conflict with current aliases
+    # Remove any binaries with non-self-referencing aliases
     local cmds=()
     for bin in "${binaries[@]}"; do
-        [[ "$(which "$bin" 2> /dev/null)" = "$bin: aliased to "* ]] || cmds+=($bin)
+        alias_value="$(meaning "$bin")"
+        [[ $bin != ${alias_value%% *} ]] || cmds+=("$bin")
     done
 
     # Create a function for each command
