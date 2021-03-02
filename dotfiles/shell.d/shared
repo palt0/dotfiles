@@ -1,8 +1,19 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 #
-# The functions in this file are utilities used within dotfiles bash scripts.
-# This file is sourced before any other complementary files and should't have any
-# dependencies.
+# These functions are utilities used within other shell.d scripts and shouldn't
+# have any external dependencies.
+
+##
+## meaning - get alias of a command, or the command itself if it doesn't have any
+##
+
+meaning() {
+    if (( $+aliases[$1] )); then
+        echo $aliases[$1]
+    else
+        echo $1
+    fi
+}
 
 ##
 ## Load function lazily (to speedup shell startup)
