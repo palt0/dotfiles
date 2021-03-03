@@ -1,6 +1,10 @@
 # Normalize line endings
 * text=auto
 
-# Github Linguist overrides
+# Language overrides
 **/Code/User/*.json linguist-language=jsonc
 *.conf linguist-language=ini
+
+# Identify external plugins as vendored code
+dotfiles/shell.d/plugins/* linguist-vendored
+dotfiles/vim/pack/vendor/* linguist-vendored
