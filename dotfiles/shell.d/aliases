@@ -20,6 +20,7 @@ alias mv='mv -i'
 alias df='df -hT --total'  # Human-readable sizes, show file-system type, print a total
 alias du='du -h'  # Human-readable sizes
 alias free='free -mt'  # Show sizes in MB, print a total
+alias k='k -hA --group-directories-first'
 alias ls='ls -hp --color=auto --group-directories-first --hyperlink=auto'
 
 # grep
@@ -33,7 +34,7 @@ alias base='cd $(git rev-parse --show-toplevel)'
 alias du1='du --max-depth=1'
 alias fixln='find . -maxdepth 1 -xtype l -delete'  # Delete broken symlinks
 alias fn="find . -name"
-alias ll='ls -lhA'  # Show as a list, with dotfiles, without "." and ".."
+alias ll='ls -lhA'  # Faster and uglier `k`
 alias reload='exec $SHELL -l'
 
 # Shorthands

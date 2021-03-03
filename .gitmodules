@@ -25,3 +25,7 @@
 [submodule "dotfiles/vim/pack/vendor/start/sandwich"]
 	path = dotfiles/vim/pack/vendor/start/sandwich
 	url = https://github.com/machakann/vim-sandwich.git
+[submodule "dotfiles/shell.d/plugins/k"]
+	path = dotfiles/shell.d/plugins/k
+	url = https://github.com/palt0/k
+	branch = palt0-patches  # tweaked version sensible to $LS_COLORS, with `ls -p` behaviour
