@@ -7,8 +7,7 @@ readonly DOTFILES="$(dirname "$(dirname "$(realpath "$0")")")/dotfiles"
 
 # At depth >1, symlinks need to be explicitly listed in CUSTOM_ENTRY_POINTS.
 readonly CUSTOM_ENTRY_POINTS=(
-    "$DOTFILES"/gnupg
-    "$DOTFILES"/config/pypoetry
+    "$DOTFILES"/gnupg/*
     "$DOTFILES"/config/Code/User/settings.json
     "$DOTFILES"/config/pypoetry/config.toml
     "$DOTFILES"/config/sublime-text-3/Packages/User
