@@ -10,6 +10,9 @@ indent_size = 4
 trim_trailing_whitespace = true
 insert_final_newline = true
 
+[*.{bat,cmd,ps1}]
+end_of_line = crlf
+
 [*.{diff,patch}]
 trim_trailing_whitespace = false
 
