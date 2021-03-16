@@ -57,7 +57,11 @@ fi
 
 if grep -qi microsoft /proc/version; then
     export WSL=true
+
     unsetopt BG_NICE  # https://github.com/Microsoft/BashOnWindows/issues/1887
+
+    export WHOME="$(wslpath "$(wslvar USERPROFILE)")"
+    : ~WHOME  # Named directory (for prompts)
 else
     export WSL=false
 fi
